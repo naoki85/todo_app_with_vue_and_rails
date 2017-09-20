@@ -3,12 +3,12 @@
     <!-- 新規作成部分 -->
     <div class="row margin-default">
       <div class="col s10 m11">
-        <input v-model="newTask" class="form-control padding-default" placeholder="Add your task!!">
+        <input v-model="newTask" id="new-task-form" class="form-control padding-default" placeholder="Add your task!!">
       </div>
       <div class="col s2 m1">
-        <div class="btn-floating waves-effect waves-light red" v-on:click="createTask">
+        <button class="btn-floating waves-effect waves-light red" v-on:click="createTask">
           <i class="material-icons">add</i>
-        </div>
+        </button>
       </div>
     </div>
     <!-- リスト表示部分 -->
@@ -21,7 +21,7 @@
       </ul>
     </div>
     <!-- 完了済みタスク表示ボタン -->
-    <div class="btn btn-custom" v-on:click="displayFinishedTasks">Display finished tasks</div>
+    <button class="btn btn-custom" v-on:click="displayFinishedTasks">Display finished tasks</button>
     <!-- 完了済みタスク一覧 -->
     <div id="finished-tasks" class="display_none">
       <ul class="collection">
